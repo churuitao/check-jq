@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ZH">
+	<head>
+		<meta charset="utf-8" />
+		<title>洛克王国宠物大全_洛克王国宠物图鉴_捕捉_4399洛克王国</title>
+		<link rel="stylesheet" href="css/currency.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+	</head>
+	<body style="background-color: #f3ffa3;">
+		<!--用户图标-->
+		<i id="user"></i>
+		<i id="user-login"></i>
+		<!--用户登陆注册面板-->
+		<div class="container" id="user-login-register">
+			<div class="card">
+		    	<div class="card-header text-center"><h3>登陆</h3></div>
+		    	<div class="card-body">
+		    		<form>
+		    			<div class="form-group" id="username">
+					    	<input type="text" class="form-control"  placeholder="用户名">
+					    </div>
+					    <div class="form-group" id="password">
+					    	<input type="password" class="form-control" placeholder="密码">
+					    </div>
+					    <div class="form-group" id="password-check">
+					    	<input type="password" class="form-control" placeholder="确认密码">
+					    </div>
+		    		</form>
+		    	</div> 
+		    	<div class="card-footer text-center">
+		    		<button type="button" class="btn btn-outline-success" power="on" id="btn-login">登陆</button>
+		    		<button type="button" class="btn btn-outline-info" power="off" id="btn-register">注册</button>
+		    		<button type="button" class="btn btn-outline-danger" id="close-login">关闭</button>
+		    	</div>
+			</div>
+		</div>
+		<!--用户信息面板-->
+		<div class="container" id="user-info">
+			<div class="card">
+		    	<div class="card-header text-center"><h3>用户信息</h3></div>
+		    	<div class="card-body">
+		    		<form>
+		    			<div class="form-group">
+		    				<label>用户名：
+		    					<label class="name-lab"></label>
+		    				</label>
+					    </div>
+					    <div class="form-group">
+					    	<label>状&nbsp;&nbsp;&nbsp;态：
+		    					<label class="static-lab"></label>
+		    				</label>
+					    </div>
+					    <div class="form-group">
+					    	<label>宠物数量：
+		    					<label class="number-lab"></label>
+		    				</label>
+					    </div>
+		    		</form>
+		    	</div> 
+		    	<div class="card-footer text-center">
+		    		<button type="button" class="btn btn-outline-danger" id="close-info-exit">退出</button>
+		    		<button type="button" class="btn btn-outline-success" id="close-info">关闭</button>
+		    	</div>
+			</div>
+		</div>
+		<!--用户添加/修改宠物面板-->
+		<div class="container" id="user-add-edit-pet">
+			<div class="card">
+		    	<div class="card-header text-center"><h3>添加宠物</h3></div>
+		    	<div class="card-body">
+		    		<form>
+		    			<div class="form-group" id="pet-name">
+					    	<input type="text" class="form-control" placeholder="宠物名称">
+					    </div>
+					    <div class="form-group" id="pet-type">
+					    	<label for="sel1">宠物类型:</label>
+							<select class="form-control">
+							    <option>普通</option>
+							    <option>天界觉醒宠物</option>
+							    <option>多元化进化宠物</option>
+							    <option>稀有宠物</option>
+							    <option>VIP宠物</option>
+							    <option>王国BOSS</option>
+							</select>
+					    </div>
+					    <div class="form-group" id="pet-attribute">
+					    	<label for="sel1">宠物系别:</label>
+							<select class="form-control">
+							    <option>冰系</option>
+							    <option>恶魔系</option>
+							    <option>幽系</option>
+							    <option>土系</option>
+							    <option>水系</option>
+							    <option>石系</option>
+							    <option>普通系</option>
+							    <option>龙系</option>
+							    <option>火系</option>
+							    <option>毒系</option>
+							    <option>电系</option>
+							    <option>草系</option>
+							    <option>武系</option>
+							    <option>机械系</option>
+							    <option>萌系</option>
+							    <option>翼系</option>
+							</select>
+					    </div>
+					    <div class="custom-file mb-3" id="petImageFile">
+      						<input type="file" class="custom-file-input" name="filename">
+      						<label class="custom-file-label" for="customFile">选择宠物图片</label>
+   						</div>
+		    		</form>
+		    	</div> 
+		    	<div class="card-footer text-center">
+		    		<button type="button" class="btn btn-outline-info" id="edit-add-pet">添加</button>
+		    		<button type="button" class="btn btn-outline-danger" id="close-edit-add-pet">取消</button>
+		    	</div>
+			</div>
+		</div>
+		<!--导航栏-->
+		<div class="title">
+			<div class="title_01"></div>
+			<div class="title_02">
+				<a href="javascript:;"></a>
+			</div>
+			<div class="title_03">
+				<ul class="navbar-nav navbar-expand-sm">
+					<li class="nav-li sy"><a class="nav-btn-sm" href="javascript:;"></a></li>
+				    <li class="nav-li cwdq"><a class="nav-btn" href="javascript:;"></a></li>
+				    <li class="nav-li cwbz"><a class="nav-btn" href="javascript:;"></a></li>
+				    <li class="nav-li jyxd"><a class="nav-btn" href="javascript:;"></a></li>
+				    <li class="nav-li lksp"><a class="nav-btn" href="javascript:;"></a></li>
+				    <li class="nav-li xbdy"><a class="nav-btn" href="javascript:;"></a></li>
+				    <li class="nav-li sgmh"><a class="nav-btn" href="javascript:;"></a></li>
+				    <li class="nav-li hjzpj"><a class="nav-btn-lg" href="javascript:;"></a></li>
+				    <li class="nav-li xszn"><a class="nav-btn" href="javascript:;"></a></li>
+				    <li class="nav-li jrlt"><a class="nav-btn" href="javascript:;"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<!--热宠推荐-->
+			<div class="hotReco">
+				<a class="hotReco-btn" href="javascript:;"></a>
+				<ul>
+					<li><a class="hot-btn-lg" href="javascript:;"></a></li>
+					<li><a class="hot-btn" href="javascript:;"></a></li>
+					<li><a class="hot-btn-sm" href="javascript:;"></a></li>
+					<li><a class="hot-btn" href="javascript:;"></a></li>
+					<li><a class="hot-btn" href="javascript:;"></a></li>
+					<li><a class="hot-btn-sm" href="javascript:;"></a></li>
+				</ul>
+				<div class="hotReco-all">
+					<a id="hotReco-prev" href="javascript:;"></a>
+					<a id="hotReco-next" href="javascript:;"></a>
+					<div class="hotReco-contant">
+						<ul id="hot-rowBox">
+							<li>
+								<ins class="new"></ins>
+								<img src="img/hot/1.gif" alt="" />
+								<span>吕布奉先</span>
+							</li>
+							<li>
+								<ins class="new"></ins>
+								<img src="img/hot/2.gif" alt="" />
+								<span>极丶岩铠领主</span>
+							</li>
+							<li>
+								<ins class="new"></ins>
+								<img src="img/hot/3.gif" alt="" />
+								<span>芒种</span>
+							</li>
+							<li>
+								<ins class="new"></ins>
+								<img src="img/hot/4.gif" alt="" />
+								<span>西圣兽白虎</span>
+							</li>
+							<li>
+								<ins class="vip"></ins>
+								<img src="img/hot/5.gif" alt="" />
+								<span>科技企鹅</span>
+							</li>
+							<li>
+								<ins class="hot"></ins>
+								<img src="img/hot/6.gif" alt="" />
+								<span>极·先锋君主</span>
+							</li>
+							<li>
+								<ins class=""></ins>
+								<img src="img/hot/7.jpg" alt="" />
+								<span>银翼王者</span>
+							</li>
+							<li>
+								<ins class="hot"></ins>
+								<img src="img/hot/8.gif" alt="" />
+								<span>立夏</span>
+							</li>
+							<li>
+								<ins class="hot"></ins>
+								<img src="img/hot/9.gif" alt="" />
+								<span>貂蝉</span>
+							</li>
+							<li>
+								<ins class="vip"></ins>
+								<img src="img/hot/10.gif" alt="" />
+								<span>东圣兽青龙</span>
+							</li>
+							<li>
+								<ins class=""></ins>
+								<img src="img/hot/11.gif" alt="" />
+								<span>食梦紫罗</span>
+							</li>
+							<li>
+								<ins class="vip"></ins>
+								<img src="img/hot/12.gif" alt="" />
+								<span>雷霆狮王</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="poster-main">
+				<div id="poster" class="carousel slide" data-ride="carousel">
+				  <!-- 指示符 -->
+					<ul class="carousel-indicators">
+						<li data-target="#poster" data-slide-to="0" class="active"></li>
+				    	<li data-target="#poster" data-slide-to="1"></li>
+				    	<li data-target="#poster" data-slide-to="2"></li>
+				    	<li data-target="#poster" data-slide-to="3"></li>
+				    	<li data-target="#poster" data-slide-to="4"></li>
+				    	<li data-target="#poster" data-slide-to="5"></li>
+				    	<li data-target="#poster" data-slide-to="6"></li>
+				  	</ul>
+				  	<!-- 轮播图片 -->
+				  	<div class="carousel-inner">
+				  		<div class="carousel-item active">
+				    		<img class="img-thumbnail img-fluid" src="img/sowingMap/1.jpg">
+				    	</div>
+				    	<div class="carousel-item">
+				    		<img class="img-thumbnail"  src="img/sowingMap/2.jpg">
+				    	</div>
+				    	<div class="carousel-item">
+				    		<img class="img-thumbnail"  src="img/sowingMap/3.jpg">
+				   		</div>
+				    	<div class="carousel-item">
+				    		<img class="img-thumbnail"  src="img/sowingMap/4.jpg">
+				    	</div>
+				    	<div class="carousel-item">
+				    		<img class="img-thumbnail"  src="img/sowingMap/5.jpg">
+				    	</div>
+				    	<div class="carousel-item">
+				    		<img class="img-thumbnail"  src="img/sowingMap/6.jpg">
+				    	</div>
+				    	<div class="carousel-item">
+				    		<img class="img-thumbnail"  src="img/sowingMap/7.jpg">
+				    	</div>
+				  	</div>
+				  	<!-- 左右切换按钮 -->
+				  	<a class="carousel-control-prev" href="#poster" data-slide="prev">
+				   		<span class="carousel-control-prev-icon"></span>
+				  	</a>
+				  	<a class="carousel-control-next" href="#poster" data-slide="next">
+				    	<span class="carousel-control-next-icon"></span>
+				  	</a>
+				</div>
+			</div>
+			<div class="pets-all">
+				<!--类别导航-->
+				<div class="btn-group" id="pets-nav">
+				    <button type="button" rel="all" class="active btn btn-info">所有宠物</button>
+				    <button type="button" rel="god" class="btn btn-info">天界觉醒宠物</button>
+				    <button type="button" rel="super" class="btn btn-info">多元进化宠物</button>
+				    <button type="button" rel="rare" class="btn btn-info">稀有宠物</button>
+				    <button type="button" rel="vip" class="btn btn-info">VIP宠物</button>
+				    <button type="button" rel="boss" class="btn btn-info">王国BOSS</button>
+				</div>
+				<!--首字母查询导航-->
+				<ul class="navbar" id="litter-query">
+					<img class="nav-item" src="img/ptes_tip.png">
+					<li class="nav-item"><span class="badge badge-info">A</span></li>
+					<li class="nav-item"><span class="badge badge-info">B</span></li>
+					<li class="nav-item"><span class="badge badge-info">C</span></li>
+					<li class="nav-item"><span class="badge badge-info">D</span></li>
+					<li class="nav-item"><span class="badge badge-info">E</span></li>
+					<li class="nav-item"><span class="badge badge-info">F</span></li>
+					<li class="nav-item"><span class="badge badge-info">G</span></li>
+					<li class="nav-item"><span class="badge badge-info">H</span></li>
+					<li class="nav-item"><span class="badge badge-info">I</span></li>
+					<li class="nav-item"><span class="badge badge-info">J</span></li>
+					<li class="nav-item"><span class="badge badge-info">K</span></li>
+					<li class="nav-item"><span class="badge badge-info">L</span></li>
+					<li class="nav-item"><span class="badge badge-info">M</span></li>
+					<li class="nav-item"><span class="badge badge-info">N</span></li>
+					<li class="nav-item"><span class="badge badge-info">O</span></li>
+					<li class="nav-item"><span class="badge badge-info">P</span></li>
+					<li class="nav-item"><span class="badge badge-info">Q</span></li>
+					<li class="nav-item"><span class="badge badge-info">R</span></li>
+					<li class="nav-item"><span class="badge badge-info">S</span></li>
+					<li class="nav-item"><span class="badge badge-info">T</span></li>
+					<li class="nav-item"><span class="badge badge-info">U</span></li>
+					<li class="nav-item"><span class="badge badge-info">V</span></li>
+					<li class="nav-item"><span class="badge badge-info">W</span></li>
+					<li class="nav-item"><span class="badge badge-info">X</span></li>
+					<li class="nav-item"><span class="badge badge-info">Y</span></li>
+					<li class="nav-item"><span class="badge badge-info">Z</span></li>
+				</ul>
+				<!--系别查询导航-->
+				<div class="navbar" id="attribute-query">
+					<li class="nav-item active">
+						<img src="img/attribute/1.png" alt="" />
+						<p class="text-muted text-center"><small>全部</small></p>
+					</li>
+					<li class="nav-item">
+						<img src="img/attribute/2.png" alt="" />
+						<p class="text-muted text-center"><small>冰系</small></p>
+					</li>
+					<li class="nav-item">
+						<img src="img/attribute/3.png" alt="" />
+						<p class="text-muted text-center"><small>恶魔系</small></p>
+					</li>
+					<li class="nav-item">
+						<img src="img/attribute/4.png" alt="" />
+						<p class="text-muted text-center"><small>幽系</small></p>
+					</li>
+					<li class="nav-item">
+						<img src="img/attribute/5.png" alt="" />
+						<p class="text-muted text-center"><small>土系</small></p>
+					</li>
+					<li class="nav-item">
+						<img src="img/attribute/6.png" alt="" />
+						<p class="text-muted text-center"><small>水系</small></p>
+					</li>
+					<li class="nav-item">
+						<img src="img/attribute/7.png" alt="" />
+						<p class="text-muted text-center"><small>石系</small></p>
+					</li>
+					<li class="nav-item">
+						<img src="img/attribute/8.png" alt="" />
+						<p class="text-muted text-center"><small>普通系</small></p>
+					</li>
+					<li class="nav-item">
+						<img src="img/attribute/9.png" alt="" />
+						<p class="text-muted text-center"><small>龙系</small></p>
+					</li>
+					<li class="nav-item">
+						<img src="img/attribute/10.png" alt="" />
+						<p class="text-muted text-center"><small>火系</small></p>
+					</li>
+					<li class="nav-item">
+						<img src="img/attribute/11.png" alt="" />
+						<p class="text-muted text-center"><small>毒系</small></p>
+					</li>
+					<li class="nav-item">
+						<img src="img/attribute/12.png" alt="" />
+						<p class="text-muted text-center"><small>电系</small></p>
+					</li>
+					<li class="nav-item">
+						<img src="img/attribute/14.png" alt="" />
+						<p class="text-muted text-center"><small>草系</small></p>
+					</li>
+					<li class="nav-item">
+						<img src="img/attribute/15.png" alt="" />
+						<p class="text-muted text-center"><small>武系</small></p>
+					</li>
+					<li class="nav-item">
+						<img src="img/attribute/16.png" alt="" />
+						<p class="text-muted text-center"><small>机械系</small></p>
+					</li>
+					<li class="nav-item">
+						<img src="img/attribute/17.png" alt="" />
+						<p class="text-muted text-center"><small>萌系</small></p>
+					</li>
+					<li class="nav-item">
+						<img src="img/attribute/18.png" alt="" />
+						<p class="text-muted text-center"><small>翼系</small></p>
+					</li>
+				</ul>
+			</div>
+			<!--宠物列表-->
+			<div id="pets-list">
+				<div class="row">
+					<div class="col-md-2" rel="Q|1001" name= "权天使">
+						<img class="img-fluid" src="img/pets/1.gif" alt="" />
+						<ins class="god"></ins>
+						<p class="text-muted text-center"><small>权天使</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="J|1001" rname= "觉醒双鱼宫">
+						<img class="img-fluid" src="img/pets/2.gif" alt="" />
+						<ins class="rare"></ins>
+						<p class="text-muted text-center"><small>觉醒双鱼宫</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="C|1002" name= "曦儿冰儿">
+						<img class="img-fluid"  src="img/pets/3.gif" alt="" />
+						<ins class="super"></ins>
+						<p class="text-muted text-center"><small>曦儿冰儿</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="M|1002" name= "魔之博伊斯">
+						<img class="img-fluid"  src="img/pets/4.gif" alt="" />
+						<ins class="rare"></ins>
+						<p class="text-muted text-center"><small>魔之博伊斯</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="U|1003" name= "幽之世影">
+						<img class="img-fluid"  src="img/pets/5.gif" alt="" />
+						<ins class="rare"></ins>
+						<p class="text-muted text-center"><small>幽之世影</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="S|1003" name= "食梦紫罗">
+						<img class="img-fluid"  src="img/pets/6.gif" alt="" />
+						<ins class="vip"></ins>
+						<p class="text-muted text-center"><small>食梦紫罗</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="A|1004" name= "艾玛斯">
+						<ins class="boss"></ins>
+						<img class="img-fluid"  src="img/pets/7.gif" alt="" />
+						<p class="text-muted text-center"><small>艾玛斯</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="J|1006" name= "极丶岩铠领主">
+						<ins class="rare"></ins>
+						<img class="img-fluid"  src="img/pets/8.gif" alt="" />
+						<p class="text-muted text-center"><small>极丶岩铠领主</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="M|1006" name= "芒种">
+						<ins class="boss"></ins>
+						<img class="img-fluid"  src="img/pets/9.gif" alt="" />
+						<p class="text-muted text-center"><small>芒种</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="L|1007" name= "立夏">
+						<ins class=""></ins>
+						<img class="img-fluid"  src="img/pets/10.gif" alt="" />
+						<p class="text-muted text-center"><small>立夏</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="S|1007" name= "水宝儿">
+						<ins class="god"></ins>
+						<img class="img-fluid"  src="img/pets/11.gif" alt="" />
+						<p class="text-muted text-center"><small>水宝儿</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="S|1007" name= "石之帕蔻">
+						<ins class=""></ins>
+						<img class="img-fluid"  src="img/pets/12.gif" alt="" />
+						<p class="text-muted text-center"><small>石之帕蔻</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="S|1008" name= "石灵巨兽">
+						<ins class="vip"></ins>
+						<img class="img-fluid"  src="img/pets/13.gif" alt="" />
+						<p class="text-muted text-center"><small>石灵巨兽</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="J|1008" name= "极、先锋君主">
+						<ins class=""></ins>
+						<img class="img-fluid"  src="img/pets/14.gif" alt="" />
+						<p class="text-muted text-center"><small>极、先锋君主</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="P|1009" name= "普之舜舜">
+						<ins class="boss"></ins>
+						<img src="img/pets/15.gif" alt="" />
+						<p class="text-muted text-center"><small>普之舜舜</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="H|1009" name= "幻晶龙炎">
+						<ins class=""></ins>
+						<img class="img-fluid"  src="img/pets/16.gif" alt="" />
+						<p class="text-muted text-center"><small>幻晶龙炎</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="T|1009" name= "天龙宝宝">
+						<ins class="god"></ins>
+						<img class="img-fluid"  src="img/pets/18.gif" alt="" />
+						<p class="text-muted text-center"><small>天龙宝宝</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="H|1010" name= "火之炽云">
+						<ins class="super"></ins>
+						<img class="img-fluid"  src="img/pets/19.gif" alt="" />
+						<p class="text-muted text-center"><small>火之炽云</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="G|1010" name= "郭淮伯济">
+						<ins class="super"></ins>
+						<img class="img-fluid"  src="img/pets/20.gif" alt="" />
+						<p class="text-muted text-center"><small>郭淮伯济</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="X|1011" name= "西圣兽白虎">
+						<ins class="rare"></ins>
+						<img class="img-fluid"  src="img/pets/21.gif" alt="" />
+						<p class="text-muted text-center"><small>西圣兽白虎</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="S|1011" name= "赤砂之尾">
+						<ins class="vip"></ins>
+						<img class="img-fluid"  src="img/pets/23.gif" alt="" />
+						<p class="text-muted text-center"><small>赤砂之尾</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="L|1011" name= "雷霆狮王">
+						<ins class="boss"></ins>
+						<img class="img-fluid"  src="img/pets/24.gif" alt="" />
+						<p class="text-muted text-center"><small>雷霆狮王</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="A|1012" name= "艾迪逊">
+						<ins class="vip"></ins>
+						<img class="img-fluid"  src="img/pets/25.gif" alt="" />
+						<p class="text-muted text-center"><small>艾迪逊</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="C|1012" name= "虫之艾莉森">
+						<ins class="super"></ins>
+						<img src="img/pets/26.gif" alt="" />
+						<p class="text-muted text-center"><small>虫之艾莉森</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="S|1013" name= "盛夏蝶后">
+						<ins class="super"></ins>
+						<img class="img-fluid"  src="img/pets/27.gif" alt="" />
+						<p class="text-muted text-center"><small>盛夏蝶后</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="C|1013" name= "草之珠儿">
+						<ins class="rare"></ins>
+						<img class="img-fluid"  src="img/pets/28.gif" alt="" />
+						<p class="text-muted text-center"><small>草之珠儿</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="L|1014" name= "绿野仙灵">
+						<ins class="god"></ins>
+						<img class="img-fluid"  src="img/pets/29.gif" alt="" />
+						<p class="text-muted text-center"><small>绿野仙灵</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="K|1014" name= "科技企鹅">
+						<ins class="super"></ins>
+						<img class="img-fluid"  src="img/pets/30.gif" alt="" />
+						<p class="text-muted text-center"><small>科技企鹅</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="L|1015" name= "吕布奉先">
+						<ins class="super"></ins>
+						<img class="img-fluid"  src="img/pets/31.gif" alt="" />
+						<p class="text-muted text-center"><small>吕布奉先</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="M|1015" name= "萌之绒球">
+						<ins class="vip"></ins>
+						<img class="img-fluid"  src="img/pets/32.gif" alt="" />
+						<p class="text-muted text-center"><small>萌之绒球</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="S|1016" name= "圣尊武王">
+						<ins class="super"></ins>
+						<img class="img-fluid"  src="img/pets/33.gif" alt="" />
+						<p class="text-muted text-center"><small>圣尊武王</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="Y|1016" name= "银翼王者">
+						<ins class="rare"></ins>
+						<img class="img-fluid"  src="img/pets/34.gif" alt="" />
+						<p class="text-muted text-center"><small>银翼王者</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="Y|1016" name= "御战圣龙">
+						<ins class="rare"></ins>
+						<img class="img-fluid"  src="img/pets/35.gif" alt="" />
+						<p class="text-muted text-center"><small>御战圣龙</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="W|1005" name= "武之丹青">
+						<ins class="vip"></ins>
+						<img class="img-fluid"  src="img/pets/36.gif" alt="" />
+						<p class="text-muted text-center"><small>武之丹青</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div class="col-md-2" rel="G|1004" name= "光之明曦">
+						<ins class="boss"></ins>
+						<img class="img-fluid"  src="img/pets/37.gif" alt="" />
+						<p class="text-muted text-center"><small>光之明曦</small></p>
+						<button class="btn btn-sm btn-danger catch">捕捉</button>
+						<button class="btn btn-sm btn-info exercise">练级</button>
+					</div>
+					<div id = "add-pet"></div>
+					<div class="col-md-12">
+						<div class="container">
+							<button type="button" id="morePets" class="btn btn-outline-info btn-lg btn-block">点击显示更多宠物</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pets-bottom"></div>
+		</div>
+	</body>
+	<!--引入JS文件-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/Convert_Pinyin.js"></script>
+	<script src="js/hotPet.js" defer></script>
+	<script src="js/edit_del_pet.js" defer></script>
+	<script src="js/login.js" defer></script>
+	<script src="js/choosePets.js"></script>
+	<script src="js/morePets.js"></script>
+</html>
